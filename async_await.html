@@ -1,0 +1,28 @@
+// async function test(){
+//     console.log("2: priya")
+//     console.log("3: priya")
+//     console.log("4: priya")
+
+// }
+//     console.log("1: priya")
+//     test()
+//     console.log("5: priya")
+
+
+
+// import fetch from "await.json";
+<script>
+async function test(){
+    console.log("2: priya")
+    const response= await fetch("./await.json").then((resp)=>{
+        return resp.json().then((data)=>{
+            console.log(data)
+        }).catch(console.log("nothing"))
+    })
+//     const student= await response.json();
+//     console.log(student)
+}
+console.log("1: priya")
+test()
+console.log("5: priya")
+</script>
